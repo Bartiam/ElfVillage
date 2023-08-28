@@ -14,6 +14,7 @@ private:
 		std::string elfName = " ";
 		const int HOUSE = 1;
 	};
+
 	std::vector<std::vector<Branch>> branches;
 
 	// Эти методы объявлены приватными для недоступности из вне класса;

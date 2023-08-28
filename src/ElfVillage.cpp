@@ -32,7 +32,7 @@ int Tree::find(const std::string& name)
 	return -1;
 }
 
-// Ìועמה populate_house() חאסוכÿוע ‎כüפמג ג המלא;
+// Ìועמה populate_house() חאסוכÿוע ‎כüפמג ג המלא; 
 void Tree::populate_house()
 {
 	std::string elfName;
