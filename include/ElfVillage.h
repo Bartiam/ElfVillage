@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -17,7 +17,7 @@ private:
 
 	std::vector<std::vector<Branch>> branches;
 
-	// Эти методы объявлены приватными для недоступности из вне класса;
+	// Р­С‚Рё РјРµС‚РѕРґС‹ РѕР±СЉСЏРІР»РµРЅС‹ РїСЂРёРІР°С‚РЅС‹РјРё РґР»СЏ РЅРµРґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РёР· РІРЅРµ РєР»Р°СЃСЃР°;
 	bool is_correct_name(const std::string& name);
 	int find(const std::string& name);
 

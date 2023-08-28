@@ -1,6 +1,6 @@
-#include "ElfVillage.h"
+п»ї#include "ElfVillage.h"
 
-// Конструктор по умолчанию, устанавливает рандомное количество больших и средних веток при создании объекта;
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЂР°РЅРґРѕРјРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±РѕР»СЊС€РёС… Рё СЃСЂРµРґРЅРёС… РІРµС‚РѕРє РїСЂРё СЃРѕР·РґР°РЅРёРё РѕР±СЉРµРєС‚Р°;
 Tree::Tree()
 {
 	branches.resize(std::rand() % 3 + 3);
@@ -8,7 +8,8 @@ Tree::Tree()
 		{branches[i].resize((std::rand() % 2 + 2) + 1);}
 }
 
-// Приватный метод is_correct_name проверяет правильность ввода имени эльфа;
+// РџСЂРёРІР°С‚РЅС‹Р№ РјРµС‚РѕРґ is_correct_name РїСЂРѕРІРµСЂСЏРµС‚ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРѕРґР° РёРјРµРЅРё СЌР»СЊС„Р°;
+
 bool Tree::is_correct_name(const std::string& name)
 {
 	if (name[0] < 'A' || name[0] > 'Z') return false;
@@ -18,7 +19,7 @@ bool Tree::is_correct_name(const std::string& name)
 	return true;
 }
 
-// Приватный метод find() ищет эльфа по имени;
+// РџСЂРёРІР°С‚РЅС‹Р№ РјРµС‚РѕРґ find() РёС‰РµС‚ СЌР»СЊС„Р° РїРѕ РёРјРµРЅРё;
 int Tree::find(const std::string& name)
 {
 	for (int i = 0; i < branches.size(); ++i)
@@ -32,7 +33,7 @@ int Tree::find(const std::string& name)
 	return -1;
 }
 
-// Метод populate_house() заселяет эльфов в дома; 
+// РњРµС‚РѕРґ populate_house() Р·Р°СЃРµР»СЏРµС‚ СЌР»СЊС„РѕРІ РІ РґРѕРјР°; 
 void Tree::populate_house()
 {
 	std::string elfName;
@@ -66,7 +67,7 @@ void Tree::populate_house()
 	}	
 }
 
-// Метод count_neighbors() считает количество соседей;
+// РњРµС‚РѕРґ count_neighbors() СЃС‡РёС‚Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕСЃРµРґРµР№;
 void Tree::count_neighbors()
 {
 	std::string name;
@@ -85,7 +86,7 @@ void Tree::count_neighbors()
 	for (int i = 0; i < branches[indexFoundElf].size(); ++i)
 		if (branches[indexFoundElf][i].elfName != "None") ++count;
 
-	// Сделал декремент у переменной count на случай одинаковых имён у искомого человека и его соседа;
+	// РЎРґРµР»Р°Р» РґРµРєСЂРµРјРµРЅС‚ Сѓ РїРµСЂРµРјРµРЅРЅРѕР№ count РЅР° СЃР»СѓС‡Р°Р№ РѕРґРёРЅР°РєРѕРІС‹С… РёРјС‘РЅ Сѓ РёСЃРєРѕРјРѕРіРѕ С‡РµР»РѕРІРµРєР° Рё РµРіРѕ СЃРѕСЃРµРґР°;
 	--count;
 
 	std::cout << "Number of neighbors at " << name << ": " << count << std::endl;
